@@ -6,5 +6,6 @@ pkgs.mkShell {
     kubecfg
     kubectl
   ];
+  shellHook = "alias k=kubectl";
 }
 

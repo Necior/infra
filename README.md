@@ -9,7 +9,6 @@ To update cluster resources, I use [`kubecfg`](https://github.com/bitnami/kubecf
 
 ## Cheat sheet
 
-* `nix-shell` - start an interactive shell with needed tools;
-* `kubecfg update httpbin.jsonnet` - update Kubernetes resources;
-* `alias k=kubectl` - create a useful alias.
+* `nix-shell` - start an interactive shell with needed tools (it also creates a `k` alias for `kubectl`);
+* `kubecfg update httpbin.jsonnet` - update Kubernetes resources.
 
