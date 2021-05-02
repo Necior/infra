@@ -1,5 +1,6 @@
 {
     local app = self,
+    local replicas = 1,
 
     deployment: {
         apiVersion: "apps/v1",
@@ -13,7 +14,7 @@
                     app: "httpbin"
                 }
             },
-            replicas: 1,
+            replicas: replicas,
             template: {
                 metadata: {
                     labels: {
