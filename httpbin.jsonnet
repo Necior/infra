@@ -1,6 +1,6 @@
 {
     local app = self,
-    local replicas = 1,
+    local replicas = 0,
 
     deployment: {
         apiVersion: "apps/v1",
