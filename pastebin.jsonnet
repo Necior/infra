@@ -25,7 +25,7 @@
           containers: [
             {
               name: 'pastebin',
-              image: 'necior/pastebin:0.1.0',
+              image: 'necior/pastebin:0.1.1',
               ports: [
                 {
                   containerPort: 2137,
