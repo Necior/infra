@@ -6,6 +6,7 @@ pkgs.mkShell {
     jsonnet
     kubecfg
     kubectl
+    kind
   ];
   shellHook = "alias k=kubectl";
 }
