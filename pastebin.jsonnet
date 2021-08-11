@@ -1,3 +1,5 @@
+local private = import 'private.jsonnet';
+
 {
   local app = self,
   local replicas = 0,
@@ -53,6 +55,33 @@
           protocol: 'TCP',
           port: 80,
           targetPort: app.deployment.spec.template.spec.containers[0].ports[0].containerPort,
+        },
+      ],
+    },
+  },
+
+  ingress: {
+    apiVersion: 'extensions/v1beta1',
+    kind: 'Ingress',
+    metadata: {
+      name: 'pastebin-ingress',
+    },
+    spec: {
+      rules: [
+        {
+          host: private.pastebin_domain,
+          http:
+            {
+              paths: [
+                {
+                  path: '/',
+                  backend: {
+                    serviceName: app.service.metadata.name,
+                    servicePort: app.service.spec.ports[0].port,
+                  },
+                },
+              ],
+            },
         },
       ],
     },
