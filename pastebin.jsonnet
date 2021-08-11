@@ -28,6 +28,7 @@ local private = import 'private.jsonnet';
             {
               name: 'pastebin',
               image: 'necior/pastebin:dev2',
+              imagePullPolicy: 'Always',
               env: [
                 {
                   name: 'PASTEBIN_HOST',

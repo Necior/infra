@@ -28,6 +28,7 @@ local private = import 'private.jsonnet';
             {
               name: 'elm-playground',
               image: 'necior/elm-playground:dev',
+              imagePullPolicy: 'Always',
               resources: {
                 requests: {
                   cpu: "0.001",
