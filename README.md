@@ -10,7 +10,7 @@ To update cluster resources, I use [`kubecfg`](https://github.com/bitnami/kubecf
 ## Cheat sheet
 
 * `nix-shell` - start an interactive shell with needed tools (it also creates a `k` alias for `kubectl`);
-* `kubecfg update elm-playground.jsonnet pastebin.jsonnet` - update Kubernetes resources.
+* `kubecfg update *.jsonnet` - update Kubernetes resources.
 
 ## Bootstrapping
 
