@@ -1,4 +1,4 @@
-local private = import 'private.jsonnet';
+local private = import 'private.libsonnet';
 
 {
   local app = self,
