@@ -28,6 +28,12 @@ local private = import 'private.jsonnet';
             {
               name: 'pastebin',
               image: 'necior/pastebin:dev2',
+              env: [
+                {
+                  name: 'PASTEBIN_HOST',
+                  value: '0.0.0.0',
+                },
+              ],
               ports: [
                 {
                   containerPort: 2137,
