@@ -2,7 +2,7 @@ local private = import 'private.jsonnet';
 
 {
   local app = self,
-  local replicas = 0,
+  local replicas = 1,
 
   deployment: {
     apiVersion: 'apps/v1',
