@@ -1,4 +1,5 @@
 {
   pastebin_domain: "example.com",
+  elm_playground_domain: "example.com",
 }
 
