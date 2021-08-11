@@ -27,7 +27,7 @@ local private = import 'private.jsonnet';
           containers: [
             {
               name: 'pastebin',
-              image: 'necior/pastebin:0.1.1',
+              image: 'necior/pastebin:dev2',
               ports: [
                 {
                   containerPort: 2137,
