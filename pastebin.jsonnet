@@ -34,6 +34,16 @@ local private = import 'private.jsonnet';
                   value: '0.0.0.0',
                 },
               ],
+              resources: {
+                requests: {
+                  cpu: "0.001",
+                  memory: "1Mi",
+                },
+                limits: {
+                  cpu: "0.250",
+                  memory: "10Mi",
+                },
+              },
               ports: [
                 {
                   containerPort: 2137,
