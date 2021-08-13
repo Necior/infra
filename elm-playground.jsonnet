@@ -31,12 +31,12 @@ local private = import 'private.libsonnet';
               imagePullPolicy: 'Always',
               resources: {
                 requests: {
-                  cpu: "0.001",
-                  memory: "3Mi",
+                  cpu: '0.001',
+                  memory: '3Mi',
                 },
                 limits: {
-                  cpu: "0.250",
-                  memory: "10Mi",
+                  cpu: '0.250',
+                  memory: '10Mi',
                 },
               },
               ports: [
