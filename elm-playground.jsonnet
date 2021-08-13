@@ -72,7 +72,7 @@ local private = import 'private.libsonnet';
   },
 
   ingress: {
-    apiVersion: 'extensions/v1beta1',
+    apiVersion: 'networking.k8s.io/v1',
     kind: 'Ingress',
     metadata: {
       name: 'elm-playground-ingress',
@@ -86,9 +86,14 @@ local private = import 'private.libsonnet';
               paths: [
                 {
                   path: '/',
+                  pathType: 'Prefix',
                   backend: {
-                    serviceName: app.service.metadata.name,
-                    servicePort: app.service.spec.ports[0].port,
+                    service: {
+                      name: app.service.metadata.name,
+                      port: {
+                        number: app.service.spec.ports[0].port,
+                      },
+                    },
                   },
                 },
               ],
