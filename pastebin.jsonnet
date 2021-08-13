@@ -82,6 +82,9 @@ local private = import 'private.libsonnet';
     kind: 'Ingress',
     metadata: {
       name: 'pastebin-ingress',
+      annotations: {
+        'traefik.ingress.kubernetes.io/router.middlewares': 'default-onlyadmin@kubernetescrd',
+      },
     },
     spec: {
       rules: [
@@ -106,6 +109,21 @@ local private = import 'private.libsonnet';
             },
         },
       ],
+    },
+  },
+
+
+  middleware: {
+    apiVersion: 'traefik.containo.us/v1alpha1',
+    kind: 'Middleware',
+    metadata: {
+      name: 'onlyadmin',
+    },
+    spec: {
+      basicAuth: {
+        secret: 'basicauth',
+        removeHeader: true,
+      },
     },
   },
 }
