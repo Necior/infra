@@ -1,5 +1,3 @@
-local private = import 'private.libsonnet';
-
 {
   local app = self,
   local replicas = 1,
