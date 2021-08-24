@@ -43,6 +43,19 @@
               ],
             },
           ],
+          tolerations: [
+            {
+              key: 'necior/arch',
+              value: 'aarch64',
+              effect: 'NoExecute',
+            },
+            {
+              key: 'necior/arch',
+              value: 'x86_64',
+              effect: 'NoExecute',
+            },
+          ],
+
         },
       },
     },
