@@ -28,12 +28,12 @@
               image: 'redis:6.2.5',
               resources: {
                 requests: {
-                  cpu: "0.001",
-                  memory: "10Mi",
+                  cpu: '0.001',
+                  memory: '10Mi',
                 },
                 limits: {
-                  cpu: "0.250",
-                  memory: "100Mi",
+                  cpu: '0.250',
+                  memory: '100Mi',
                 },
               },
               ports: [
