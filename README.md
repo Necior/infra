@@ -21,5 +21,6 @@ Before above workflow became possible, I had to:
 - install vanilla K3s;
 - setup firewall;
 - copy `/etc/rancher/k3s/k3s.conf` from the VM to `~/.kube/config` on my workstation;
-- open or tunnel the Kubernetes API port (in my case `ssh -L 6443:localhost:6443 vm` is good enough).
+- open or tunnel the Kubernetes API port (in my case `ssh -L 6443:localhost:6443 vm` is good enough);
+- allow cross-node traffic.
 
