@@ -1,7 +1,7 @@
 # personal-infra
 
 My personal infrastructure.
-Currently I use a self-hosted K3s instance on a single aarch64 VM.
+Currently I use a self-hosted K3s instance on two VMs (one using `aarch64` and one using `x86_64` architecture; see **Heterogeneous architecture** below).
 
 All resources are stored in this repository.
 Since YAML is a nightmare, I use [Jsonnet](https://jsonnet.org/), which is a JSON superset with variables, functions etc.
