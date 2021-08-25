@@ -50,7 +50,7 @@ local private = import 'private.libsonnet';
             {
               key: 'necior/arch',
               value: 'aarch64',
-              effect: 'NoExecute',
+              effect: 'NoSchedule',
             },
           ],
         },

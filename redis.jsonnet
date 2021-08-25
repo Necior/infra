@@ -47,12 +47,12 @@
             {
               key: 'necior/arch',
               value: 'aarch64',
-              effect: 'NoExecute',
+              effect: 'NoSchedule',
             },
             {
               key: 'necior/arch',
               value: 'x86_64',
-              effect: 'NoExecute',
+              effect: 'NoSchedule',
             },
           ],
 

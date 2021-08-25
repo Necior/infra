@@ -28,5 +28,5 @@ Before above workflow became possible, I had to:
 
 I experiment with having nodes with different CPU architectures (currently `x86_64` and `aarch64`).
 
-Since not every service is available on every architecture, I have [tainted](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) my nodes with `necior/arch=x86_64:NoExecute` xor `necior/arch=aarch64:NoExecute` and I have added appropriate tolerations to Deployments objects.
+Since not every service is available on every architecture, I have [tainted](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) my nodes with `necior/arch=x86_64:NoSchedule` xor `necior/arch=aarch64:NoSchedule` and I have added appropriate tolerations to Deployments objects.
 
