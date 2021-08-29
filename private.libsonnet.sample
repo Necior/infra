@@ -1,6 +1,7 @@
 {
   pastebin_domain: "pastebin.example.com",
   elm_playground_domain: "elm.example.com",
+  blog_domain: "blog.example.com",
 
   # Create with `htpasswd -nb user password | base64 -`.
   basic_auth_users: "dXNlcjokYXByMSRiZmtBd2U4TyRXM2lMWnJtYUlNcEZyUXJ1cGwwOVIxCgo=",
