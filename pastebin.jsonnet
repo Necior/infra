@@ -119,19 +119,4 @@ local private = import 'private.libsonnet';
       ],
     },
   },
-
-
-  middleware: {
-    apiVersion: 'traefik.containo.us/v1alpha1',
-    kind: 'Middleware',
-    metadata: {
-      name: 'onlyadmin',
-    },
-    spec: {
-      basicAuth: {
-        secret: 'basicauth',
-        removeHeader: true,
-      },
-    },
-  },
 }
