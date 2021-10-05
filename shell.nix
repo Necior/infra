@@ -5,7 +5,6 @@ pkgs.mkShell {
     jsonnet
     kubecfg
     kubectl
-    terraform_0_15
   ];
   shellHook = "alias k=kubectl";
 }
