@@ -1,6 +1,7 @@
 {
   pastebin_domain: "pastebin.example.com",
   elm_playground_domain: "elm.example.com",
+  elm_pomodoro_domain: "pomodoro.example.com",
   blog_domain: "blog.example.com",
   mongo_express_domain: "mongo.example.com",
 
