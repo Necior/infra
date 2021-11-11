@@ -36,11 +36,11 @@ local private = import 'private.libsonnet';
               resources: {
                 requests: {
                   cpu: '0.001',
-                  memory: '10Mi',
+                  memory: '5Mi',
                 },
                 limits: {
                   cpu: '0.250',
-                  memory: '100Mi',
+                  memory: '10Mi',
                 },
               },
             },
