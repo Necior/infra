@@ -27,6 +27,7 @@ local private = import 'private.libsonnet';
           },
         },
         spec: {
+          terminationGracePeriodSeconds: 5,
           containers: [
             {
               name: 'korova',
