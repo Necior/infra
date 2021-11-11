@@ -36,6 +36,12 @@
                   memory: '100Mi',
                 },
               },
+              volumeMounts: [
+                {
+                  name: app.deployment.spec.template.spec.volumes[0].name,
+                  mountPath: '/data/db',
+                },
+              ],
               ports: [
                 {
                   containerPort: 27017,
@@ -43,6 +49,13 @@
               ],
             },
           ],
+          volumes: [
+            {
+              name: 'database',
+              persistentVolumeClaim: { claimName: app.pvc.metadata.name },
+            },
+          ],
+
           tolerations: [
             {
               key: 'necior/arch',
@@ -73,6 +86,25 @@
           targetPort: app.deployment.spec.template.spec.containers[0].ports[0].containerPort,
         },
       ],
+    },
+  },
+
+  pvc: {
+    apiVersion: 'v1',
+    kind: 'PersistentVolumeClaim',
+    metadata: {
+      name: 'database',
+    },
+    spec: {
+      accessModes: [
+        'ReadWriteOnce',
+      ],
+      storageClassName: 'local-path',
+      resources: {
+        requests: {
+          storage: '2Gi',
+        },
+      },
     },
   },
 }
