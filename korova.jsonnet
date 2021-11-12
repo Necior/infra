@@ -46,7 +46,7 @@ local private = import 'private.libsonnet';
                   memory: '5Mi',
                 },
                 limits: {
-                  cpu: '0.250',
+                  cpu: '1.0',
                   memory: '10Mi',
                 },
               },
