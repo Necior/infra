@@ -1,3 +1,4 @@
+local mongodb = import 'mongodb.jsonnet';
 local private = import 'private.libsonnet';
 
 {
@@ -31,8 +32,13 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'korova',
-              image: 'necior/korova:0.1.0',
+              image: 'necior/korova:0.1.01', // mistagged image, really it is :0.1.1
               imagePullPolicy: 'Always',
+              env: [
+                { name: 'KOROVA_MONGODB_CONNECTION_STRING', value: 'mongodb://' + mongodb.service.metadata.name },
+                { name: 'KOROVA_MONGODB_DB', value: 'httpmongodb' },
+                { name: 'KOROVA_MONGODB_COLLECTION', value: 'httpmongocollection' },
+              ],
               envFrom: [{ secretRef: { name: app.secret.metadata.name } }],
               resources: {
                 requests: {
