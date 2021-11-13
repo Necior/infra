@@ -5,6 +5,7 @@
   blog_domain: 'blog.example.com',
   mongo_express_domain: 'mongo.example.com',
   httpmongo_domain: 'httpmongo.example.com',
+  unstable_http_server_domain: 'unstable.example.com',
 
   korova_token: 'some-discord-token',
   korova_owm_apikey: '0123456789abcdef',
