@@ -96,6 +96,7 @@ local private = import 'private.libsonnet';
       },
     },
     spec: {
+      tls: [{ hosts: private.domains, secretName: 'domain-cert-tls' }],
       rules: [
         {
           host: private.mongo_express_domain,

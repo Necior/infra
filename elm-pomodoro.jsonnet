@@ -85,6 +85,7 @@ local private = import 'private.libsonnet';
       name: 'elm-pomodoro-ingress',
     },
     spec: {
+      tls: [{ hosts: private.domains, secretName: 'domain-cert-tls' }],
       rules: [
         {
           host: private.elm_pomodoro_domain,

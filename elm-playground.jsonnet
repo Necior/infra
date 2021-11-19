@@ -85,6 +85,7 @@ local private = import 'private.libsonnet';
       name: 'elm-playground-ingress',
     },
     spec: {
+      tls: [{ hosts: private.domains, secretName: 'domain-cert-tls' }],
       rules: [
         {
           host: private.elm_playground_domain,

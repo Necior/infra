@@ -85,6 +85,7 @@ local private = import 'private.libsonnet';
       name: 'blog-ingress',
     },
     spec: {
+      tls: [{ hosts: private.domains, secretName: 'domain-cert-tls' }],
       rules: [
         {
           host: private.blog_domain,

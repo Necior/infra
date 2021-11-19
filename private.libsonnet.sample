@@ -10,6 +10,11 @@
   korova_token: 'some-discord-token',
   korova_owm_apikey: '0123456789abcdef',
 
+  digitalocean_apikey: std.base64('0123456789abcdef'),
+
+  admin_email: 'admin@example.com',
+  domains: ['example.com', '*.example.com'],
+
   // Create with `htpasswd -nb user password | base64 -`.
   basic_auth_users: 'dXNlcjokYXByMSRiZmtBd2U4TyRXM2lMWnJtYUlNcEZyUXJ1cGwwOVIxCgo=',
 }

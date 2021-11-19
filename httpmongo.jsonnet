@@ -93,6 +93,7 @@ local private = import 'private.libsonnet';
       name: 'httpmongo-ingress',
     },
     spec: {
+      tls: [{ hosts: private.domains, secretName: 'domain-cert-tls' }],
       rules: [
         {
           host: private.httpmongo_domain,
