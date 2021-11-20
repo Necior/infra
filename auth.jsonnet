@@ -8,20 +8,7 @@ local private = import 'private.libsonnet';
       name: 'basicauth',
     },
     data: {
-      users: private.basic_auth_users,
-    },
-  },
-  middleware: {
-    apiVersion: 'traefik.containo.us/v1alpha1',
-    kind: 'Middleware',
-    metadata: {
-      name: 'onlyadmin',
-    },
-    spec: {
-      basicAuth: {
-        secret: 'basicauth',
-        removeHeader: true,
-      },
+      auth: private.basic_auth_users,
     },
   },
 }

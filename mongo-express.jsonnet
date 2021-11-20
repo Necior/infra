@@ -91,9 +91,9 @@ local private = import 'private.libsonnet';
     metadata: {
       name: 'mongo-express-ingress',
       annotations: {
-        'traefik.ingress.kubernetes.io/router.middlewares': 'default-onlyadmin@kubernetescrd',
+        'nginx.ingress.kubernetes.io/auth-type': 'basic',
+        'nginx.ingress.kubernetes.io/auth-secret': 'basicauth',
       },
-
     },
     spec: {
       rules: [
