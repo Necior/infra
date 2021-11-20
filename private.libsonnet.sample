@@ -7,8 +7,8 @@
   httpmongo_domain: 'httpmongo.example.com',
   unstable_http_server_domain: 'unstable.example.com',
 
-  korova_token: 'some-discord-token',
-  korova_owm_apikey: '0123456789abcdef',
+  korova_token: std.base64('some-discord-token'),
+  korova_owm_apikey: std.base64('0123456789abcdef'),
 
   digitalocean_apikey: std.base64('0123456789abcdef'),
 
