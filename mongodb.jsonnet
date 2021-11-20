@@ -28,11 +28,11 @@
               image: 'mongo:latest',
               resources: {
                 requests: {
-                  cpu: '0.001',
+                  cpu: '1m',
                   memory: '10Mi',
                 },
                 limits: {
-                  cpu: '0.250',
+                  cpu: '250m',
                   memory: '100Mi',
                 },
               },
@@ -51,7 +51,7 @@
           ],
           volumes: [
             {
-              name: 'database',
+              name: app.pvc.metadata.name,
               persistentVolumeClaim: { claimName: app.pvc.metadata.name },
             },
           ],
