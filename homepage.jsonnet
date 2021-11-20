@@ -27,7 +27,7 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'homepage',
-              image: 'nginx:1.21.1',
+              image: 'nginx:1.21.4',
               imagePullPolicy: 'IfNotPresent',
               resources: {
                 requests: {
