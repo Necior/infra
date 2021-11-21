@@ -7,6 +7,7 @@
   httpmongo_domain: 'httpmongo.example.com',
   unstable_http_server_domain: 'unstable.example.com',
   homepage_domain: 'homepage.example.com',
+  sssnek_domain: 'sssnek.example.com',
 
   korova_token: std.base64('some-discord-token'),
   korova_owm_apikey: std.base64('0123456789abcdef'),
