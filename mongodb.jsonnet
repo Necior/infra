@@ -25,7 +25,8 @@
           containers: [
             {
               name: 'mongodb',
-              image: 'mongo:latest',
+              image: 'mongo:5.0.4',
+              imagePullPolicy: 'IfNotPresent',
               resources: {
                 requests: {
                   cpu: '1m',

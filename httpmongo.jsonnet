@@ -27,10 +27,10 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'httpmongo',
-              image: 'necior/httpmongo:dev',
+              image: 'necior/httpmongo:0.1.0',
+              imagePullPolicy: 'IfNotPresent',
               command: ['gunicorn'],
               args: ['--bind', '0.0.0.0:80', 'app:app'],
-              imagePullPolicy: 'Always',
               env: [
                 {
                   name: 'HTTPMONGO_MONGODB_HOST',

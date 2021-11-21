@@ -27,8 +27,8 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'unstable-http-server',
-              image: 'necior/unstable-http-server:dev',
-              imagePullPolicy: 'Always',
+              image: 'necior/unstable-http-server:0.1.1',
+              imagePullPolicy: 'IfNotPresent',
               resources: {
                 requests: {
                   cpu: '0.001',

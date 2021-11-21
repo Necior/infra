@@ -27,8 +27,8 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'pastebin',
-              image: 'necior/pastebin:dev2',
-              imagePullPolicy: 'Always',
+              image: 'necior/pastebin:0.1.2',
+              imagePullPolicy: 'IfNotPresent',
               env: [
                 {
                   name: 'PASTEBIN_HOST',

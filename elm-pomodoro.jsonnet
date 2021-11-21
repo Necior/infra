@@ -27,8 +27,8 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'elm-pomodoro',
-              image: 'necior/elm-pomodoro:dev',
-              imagePullPolicy: 'Always',
+              image: 'necior/elm-pomodoro:0.1.0',
+              imagePullPolicy: 'IfNotPresent',
               resources: {
                 requests: {
                   cpu: '0.001',

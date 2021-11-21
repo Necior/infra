@@ -27,8 +27,8 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'elm-playground',
-              image: 'necior/elm-playground:dev',
-              imagePullPolicy: 'Always',
+              image: 'necior/elm-playground:0.1.0',
+              imagePullPolicy: 'IfNotPresent',
               resources: {
                 requests: {
                   cpu: '0.001',

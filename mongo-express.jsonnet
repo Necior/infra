@@ -27,8 +27,8 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'mongo-express',
-              image: 'mongo-express:latest',
-              imagePullPolicy: 'Always',
+              image: 'mongo-express:1.0.0-alpha.4',
+              imagePullPolicy: 'IfNotPresent',
               env: [
                 {
                   name: 'ME_CONFIG_MONGODB_SERVER',

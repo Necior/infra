@@ -33,7 +33,7 @@ local private = import 'private.libsonnet';
             {
               name: 'korova',
               image: 'necior/korova:0.1.5',
-              imagePullPolicy: 'Always',
+              imagePullPolicy: 'IfNotPresent',
               env: [
                 { name: 'KOROVA_MONGODB_CONNECTION_STRING', value: 'mongodb://' + mongodb.service.metadata.name },
                 { name: 'KOROVA_MONGODB_DB', value: 'httpmongodb' },
