@@ -27,7 +27,7 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'sssnek',
-              image: 'necior/sssnek:0.1.0',
+              image: 'necior/sssnek:0.1.1',
               imagePullPolicy: 'IfNotPresent',
               resources: {
                 requests: {
