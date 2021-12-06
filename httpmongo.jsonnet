@@ -27,7 +27,7 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'httpmongo',
-              image: 'necior/httpmongo:0.1.0',
+              image: 'necior/httpmongo:0.1.1',
               imagePullPolicy: 'IfNotPresent',
               command: ['gunicorn'],
               args: ['--bind', '0.0.0.0:80', 'app:app'],
