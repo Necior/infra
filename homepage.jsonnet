@@ -43,12 +43,7 @@ local private = import 'private.libsonnet';
                 {
                   name: app.deployment.spec.template.spec.volumes[0].name,
                   mountPath: '/usr/share/nginx/html',
-                  readOnly: false,
-                },
-                {
-                  name: app.deployment.spec.template.spec.volumes[1].name,
-                  mountPath: '/usr/share/nginx/html/large',
-                  readOnly: false,
+                  readOnly: true,
                 },
               ],
               ports: [
@@ -69,10 +64,6 @@ local private = import 'private.libsonnet';
             {
               name: app.pvc.metadata.name,
               persistentVolumeClaim: { claimName: app.pvc.metadata.name },
-            },
-            {
-              name: app.pvc2.metadata.name,
-              persistentVolumeClaim: { claimName: app.pvc2.metadata.name },
             },
           ],
         },
@@ -145,23 +136,6 @@ local private = import 'private.libsonnet';
       resources: {
         requests: {
           storage: '300Mi',
-        },
-      },
-    },
-  },
-
-  pvc2: {
-    apiVersion: 'v1',
-    kind: 'PersistentVolumeClaim',
-    metadata: {
-      name: 'homepage-large',
-    },
-    spec: {
-      accessModes: ['ReadWriteOnce'],
-      storageClassName: 'local-path',
-      resources: {
-        requests: {
-          storage: '30Gi',
         },
       },
     },
