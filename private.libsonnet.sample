@@ -9,6 +9,7 @@
   homepage_domain: 'homepage.example.com',
   sssnek_domain: 'sssnek.example.com',
   adminer_domain: 'adminer.example.com',
+  grafana_domain: 'grafana.example.com',
 
   postgresql_postgres_password: "some-difficult-password",
 
