@@ -52,6 +52,11 @@ local private = import 'private.libsonnet';
               value: 'aarch64',
               effect: 'NoSchedule',
             },
+            {
+              key: 'necior/arch',
+              value: 'x86_64',
+              effect: 'NoSchedule',
+            },
           ],
         },
       },
