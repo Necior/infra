@@ -1,16 +1,17 @@
 local private = import 'private.libsonnet';
-local links = ['<a href="https://' + domain + '">' + domain + '</a><br/>' for domain in std.sort([
-  private.elm_playground_domain,
-  private.elm_pomodoro_domain,
-  private.blog_domain,
-  private.mongo_express_domain,
-  private.httpmongo_domain,
-  private.unstable_http_server_domain,
-  private.homepage_domain,
-  private.sssnek_domain,
-  private.adminer_domain,
-  private.grafana_domain,
-])];
+local links = ['<a href="https://' + e[0] + '">' + e[1] + '</a><br/>' for e in std.sort([
+  [private.elm_playground_domain, 'Todo app'],
+  [private.elm_pomodoro_domain, 'Pomodoro'],
+  [private.blog_domain, 'Blog'],
+  [private.mongo_express_domain, 'Mongo Express'],
+  [private.httpmongo_domain, 'httpmongo'],
+  [private.unstable_http_server_domain, 'unstable-http-server'],
+  [private.homepage_domain, 'home'],
+  [private.sssnek_domain, 'Sssnek'],
+  [private.adminer_domain, 'Adminer'],
+  [private.grafana_domain, 'Grafana'],
+  [private.kanboard_domain, 'Kanboard'],
+], function(x) std.asciiLower(x[1]))];
 local html = '<!doctype html><html lang="en"><title>meta</title><body>' + std.join(' ', links);
 
 {
