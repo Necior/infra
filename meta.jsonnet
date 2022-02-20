@@ -67,6 +67,11 @@ local html = '<!doctype html><html lang="en"><title>meta</title><body>' + std.jo
               value: 'aarch64',
               effect: 'NoSchedule',
             },
+            {
+              key: 'necior/arch',
+              value: 'x86_64',
+              effect: 'NoSchedule',
+            },
           ],
         },
       },
