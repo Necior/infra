@@ -92,10 +92,6 @@ local private = import 'private.libsonnet';
     kind: 'Ingress',
     metadata: {
       name: 'kanboard-ingress',
-      annotations: {
-        'nginx.ingress.kubernetes.io/auth-type': 'basic',
-        'nginx.ingress.kubernetes.io/auth-secret': 'basicauth',
-      },
     },
     spec: {
       tls: [{ hosts: private.domains, secretName: 'domain-cert-tls' }],
