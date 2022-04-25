@@ -2,7 +2,6 @@ local private = import 'private.libsonnet';
 local links = ['<a href="https://' + e[0] + '">' + e[1] + '</a><br/>' for e in std.sort([
   [private.elm_playground_domain, 'Todo app'],
   [private.elm_pomodoro_domain, 'Pomodoro'],
-  [private.blog_domain, 'Blog'],
   [private.mongo_express_domain, 'Mongo Express'],
   [private.httpmongo_domain, 'httpmongo'],
   [private.unstable_http_server_domain, 'unstable-http-server'],
