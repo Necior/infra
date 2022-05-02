@@ -13,6 +13,7 @@
   kanboard_domain: 'kanboard.example.com',
 
   postgresql_postgres_password: "some-difficult-password",
+  mariadb_root_password: "some-difficult-password",
 
   korova_token: std.base64('some-discord-token'),
   korova_owm_apikey: std.base64('0123456789abcdef'),
