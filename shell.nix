@@ -6,6 +6,10 @@ pkgs.mkShell {
     kubecfg
     kubectl
   ];
-  shellHook = "alias k=kubectl";
+  shellHook = ''
+    alias k=kubectl
+    source <(kubectl completion bash)
+    complete -F __start_kubectl k
+  '';
 }
 
