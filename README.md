@@ -24,7 +24,7 @@ Before above workflow became possible, I had to:
 - open or tunnel the Kubernetes API port (in my case `ssh -L 6443:localhost:6443 vm` is good enough);
 - allow cross-node traffic.
 
-Also, by running `kubectl apply -k vendor/`:
+Also, by running `kubectl apply -f vendor/`:
 
 - install NGINX Ingress Controller and configure it as a default;
 - install cert-manager.
