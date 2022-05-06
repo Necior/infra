@@ -3,6 +3,7 @@
 pkgs.mkShell {
   buildInputs = with pkgs; [
     jsonnet
+    k9s
     kubecfg
     kubectl
   ];
