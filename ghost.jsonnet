@@ -1,3 +1,6 @@
+local mariadb = import 'mariadb.jsonnet';
+local private = import 'private.libsonnet';
+
 {
   config: {
     apiVersion: 'v1',
@@ -30,6 +33,43 @@
           }
         };
       |||,
+    },
+  },
+
+  configMySQL: {
+    apiVersion: 'v1',
+    kind: 'ConfigMap',
+    metadata: {
+      name: 'ghost-config-mysql',
+    },
+    data: {
+      'ghost-config.js': std.strReplace(|||
+        var path = require('path'),
+            config;
+
+        config = {
+          development: {
+            url: 'http://localhost:2368',
+            database: {
+              client: 'mysql',
+              connection: {
+                host: 'mariadb',
+                user: 'root',
+                password: 'PASSWORDHERE',
+                database: 'ghost_db',
+                charset: 'utf8'
+              }
+            },
+            server: {
+              host: '0.0.0.0',
+              port: '2368'
+            },
+            paths: {
+              contentPath: path.join(process.env.GHOST_CONTENT, '/')
+            }
+          }
+        };
+      |||, 'PASSWORDHERE', private.mariadb_root_password),
     },
   },
 
@@ -71,7 +111,7 @@
               name: 'config',
               configMap: {
                 defaultMode: 420,
-                name: 'ghost-config',
+                name: 'ghost-config-mysql',
               },
             },
           ],
