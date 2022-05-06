@@ -43,19 +43,26 @@
               ],
             },
           ],
-          tolerations: [
-            {
-              key: 'necior/arch',
-              value: 'aarch64',
-              effect: 'NoSchedule',
+          affinity: {
+            nodeAffinity: {
+              requiredDuringSchedulingIgnoredDuringExecution: {
+                nodeSelectorTerms: [
+                  {
+                    matchExpressions: [
+                      {
+                        key: 'kubernetes.io/arch',
+                        operator: 'In',
+                        values: [
+                          'amd64',
+                          'arm64',
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
             },
-            {
-              key: 'necior/arch',
-              value: 'x86_64',
-              effect: 'NoSchedule',
-            },
-          ],
-
+          },
         },
       },
     },
