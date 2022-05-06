@@ -80,7 +80,7 @@ local private = import 'private.libsonnet';
       name: 'ghost',
     },
     spec: {
-      replicas: 1,
+      replicas: 3,
       selector: {
         matchLabels: {
           run: 'ghost',
