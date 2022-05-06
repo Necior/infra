@@ -9,6 +9,7 @@ pkgs.mkShell {
   ];
   shellHook = ''
     alias k=kubectl
+    alias k9s='k9s --readonly'
     source <(kubectl completion bash)
     complete -F __start_kubectl k
   '';
