@@ -52,14 +52,25 @@ local private = import 'private.libsonnet';
               ],
             },
           ],
-          tolerations: [
-            {
-              key: 'necior/arch',
-              value: 'aarch64',
-              effect: 'NoSchedule',
+          affinity: {
+            nodeAffinity: {
+              requiredDuringSchedulingIgnoredDuringExecution: {
+                nodeSelectorTerms: [
+                  {
+                    matchExpressions: [
+                      {
+                        key: 'kubernetes.io/arch',
+                        operator: 'In',
+                        values: [
+                          'arm64',
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
             },
-          ],
-
+          },
         },
       },
     },
