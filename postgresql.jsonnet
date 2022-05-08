@@ -44,7 +44,7 @@ local private = import 'private.libsonnet';
               volumeMounts: [
                 {
                   name: app.deployment.spec.template.spec.volumes[0].name,
-                  mountPath: '/data/db',
+                  mountPath: '/var/lib/postgresql/data',
                 },
               ],
               ports: [
