@@ -148,7 +148,7 @@ local simple_app(
       accessModes: [
         'ReadWriteOnce',
       ],
-      storageClassName: 'local-path',
+      storageClassName: 'no-autoremove',
       resources: {
         requests: {
           /*
