@@ -10,7 +10,6 @@
   adminer_domain: 'adminer.example.com',
   grafana_domain: 'grafana.example.com',
   meta_domain: 'meta.example.com',
-  kanboard_domain: 'kanboard.example.com',
 
   postgresql_postgres_password: "some-difficult-password",
   mariadb_root_password: "some-difficult-password",
