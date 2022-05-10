@@ -11,6 +11,7 @@
   grafana_domain: 'grafana.example.com',
   meta_domain: 'meta.example.com',
   dokuwiki_domain: 'dokuwiki.example.com',
+  validator_domain: 'validator.example.com',
 
   postgresql_postgres_password: "some-difficult-password",
   mariadb_root_password: "some-difficult-password",
