@@ -14,7 +14,7 @@ local simple_app(
   assert std.length(archs) == 1 || std.length(archs) == 2 : 'You must provide 1 or 2 architectures, not ' + std.length(archs),
   assert archs[0] == 'arm64' || archs[0] == 'amd64' : 'Invalid architecture: ' + archs[0],
   assert std.length(archs) == 1 || archs[1] == 'arm64' || archs[1] == 'amd64' : 'Invalid architecture: ' + archs[1],
-  assert persistent_path == null || replicas <= 1 : 'There is not support for multiple replicas with persistence',
+  assert persistent_path == null || replicas <= 1 : 'There is no support for multiple replicas with persistence',
 
   local app = self,
 
