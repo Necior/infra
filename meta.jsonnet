@@ -9,7 +9,6 @@ local links = ['<a href="https://' + e[0] + '">' + e[1] + '</a><br/>' for e in s
   [private.sssnek_domain, 'Sssnek'],
   [private.adminer_domain, 'Adminer'],
   [private.grafana_domain, 'Grafana'],
-  [private.kanboard_domain, 'Kanboard'],
   [private.dokuwiki_domain, 'Wiki'],
 ], function(x) std.asciiLower(x[1]))];
 local html = '<!doctype html><html lang="en"><title>meta</title><body>' + std.join(' ', links);
