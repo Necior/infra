@@ -32,7 +32,7 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'korova',
-              image: 'necior/korova:0.1.6',
+              image: 'necior/korova:0.1.7',
               imagePullPolicy: 'IfNotPresent',
               env: [
                 { name: 'KOROVA_MONGODB_CONNECTION_STRING', value: 'mongodb://' + mongodb.service.metadata.name },
@@ -62,7 +62,7 @@ local private = import 'private.libsonnet';
                         key: 'kubernetes.io/arch',
                         operator: 'In',
                         values: [
-                          'arm64',
+                          'amd64',
                         ],
                       },
                     ],
