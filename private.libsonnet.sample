@@ -10,7 +10,6 @@
   adminer_domain: 'adminer.example.com',
   grafana_domain: 'grafana.example.com',
   meta_domain: 'meta.example.com',
-  dokuwiki_domain: 'dokuwiki.example.com',
   validator_domain: 'validator.example.com',
   privatebin_domain: 'privatebin.example.com',
   etherpad_domain: 'etherpad.example.com',
@@ -18,7 +17,6 @@
 
   postgresql_postgres_password: "some-difficult-password",
   mariadb_root_password: "some-difficult-password",
-  dokuwiki_password: "some-difficult-password",
 
   korova_token: std.base64('some-discord-token'),
   korova_owm_apikey: std.base64('0123456789abcdef'),
