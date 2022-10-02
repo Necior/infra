@@ -8,4 +8,7 @@ app(
   domain=private.etherpad_domain,
   archs=['amd64'],
   persistent_path='/opt/etherpad-lite/var/',
+  env=[
+    { name: 'SKIN_VARIANTS', value: 'super-dark-toolbar super-dark-background dark-editor' },
+  ],
 )
