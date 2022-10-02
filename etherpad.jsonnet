@@ -7,4 +7,5 @@ app(
   internal_port=9001,
   domain=private.etherpad_domain,
   archs=['amd64'],
+  persistent_path='/opt/etherpad-lite/var/',
 )
