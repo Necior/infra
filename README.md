@@ -1,4 +1,4 @@
-# personal-infra
+# infra
 
 My personal infrastructure.
 Currently I use a self-hosted K3s instance on two VMs (one using `aarch64` and one using `x86_64` architecture; see **Heterogeneous architecture** below).
