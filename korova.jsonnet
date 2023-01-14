@@ -32,7 +32,7 @@ local private = import 'private.libsonnet';
           containers: [
             {
               name: 'korova',
-              image: 'necior/korova:0.1.14',
+              image: 'necior/korova:0.1.15',
               imagePullPolicy: 'IfNotPresent',
               env: [
                 { name: 'KOROVA_MONGODB_CONNECTION_STRING', value: 'mongodb://' + mongodb.service.metadata.name },
