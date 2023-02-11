@@ -18,7 +18,7 @@ Before above workflow became possible, I had to:
 
 - point `example.com` to the cluster IP;
 - get a VM;
-- install K3s (almost vanilla K3s, except `INSTALL_K3S_EXEC="server --no-deploy traefik"`);
+- install K3s (almost vanilla K3s, except `INSTALL_K3S_EXEC="server --disable traefik"`);
 - setup firewall;
 - copy `/etc/rancher/k3s/k3s.conf` from the VM to `~/.kube/config` on my workstation;
 - open or tunnel the Kubernetes API port (in my case `ssh -L 6443:localhost:6443 vm` is good enough);
