@@ -63,6 +63,7 @@ local private = import 'private.libsonnet';
                         operator: 'In',
                         values: [
                           'amd64',
+                          'arm64',
                         ],
                       },
                     ],
